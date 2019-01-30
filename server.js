@@ -42,7 +42,7 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
    res.render('home.hbs', {
       pageTitle: 'Node.js Webserver App - Home Page',
-      welcomeMessage: 'Welcome to my Node.js Webserver App! Cześć!'
+      welcomeMessage: 'Welcome to my Node.js Webserver App!'
    });
 });
 
@@ -52,9 +52,9 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.get('/bad', (req, res) => {
-    res.send({
-        errorMessage: 'Error handling the request.'
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+       pageTitle: "List of my projects"
     });
 });
 
